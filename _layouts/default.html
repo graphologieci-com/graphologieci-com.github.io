@@ -10,10 +10,10 @@
   {% if page.description %}
   <meta name="description" content="{{ page.description }}" />
   {% endif %}
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="type" content="{{ site.seo.meta_og_type }}" />
+  <meta name="title" content="{{ page.title }}" />
+  <meta name="type" content="{{ site.seo.meta_og_type }}" />
   <meta property="og:url" content="{{ page.url }}" />
-  <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
+  <meta name="og:image" content="{{ site.seo.meta_og_image }}" />
   <meta property="description" content="{{ page.description }}" />
 </head>
 <body class='page {{page.bodyClass}}'>
