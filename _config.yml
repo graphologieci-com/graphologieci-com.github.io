@@ -1,0 +1,59 @@
+baseurl: ''
+exclude: ['README.md']
+permalink: pretty
+title: 'BUREAU AFRIQUE D’EXPERTISES JUDICIAIRES ET D’INVESTIGATIONS'
+
+google_analytics_id: UA-166862695-2
+homepage:
+  show_call_box: true
+logo:
+  mobile: "images/logo/logo-400x400.png"
+  desktop: "images/logo/logo-400x400.png"
+  desktop_height: "136px"
+footer:
+  copyright_text: 'GaltresIT'  
+maps:
+  google:
+    api_key: AIzaSyC7DsQWw1gC_JnVRKzoiPuYe8FP0Xm2Bg0
+seo:
+  meta_og_type: "website"
+  meta_og_image: "https://raw.githubusercontent.com/graphologieci/graphologieci.github.io/master/images/logo-400x400.ico"
+meta_og_title:
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+  team:
+    output: true
+    permalink: /team/:path/
+
+defaults:
+  - scope:
+      type: services
+    values:
+      layout: service
+      bodyClass: page-services-single
+  - scope:
+      path: 'images'
+    values:
+      image: true
+
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
+
+sass:
+  style: compact # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+  - jekyll-maps
+  - jekyll-sitemap
+  - jekyll-seo-tag
